@@ -1,0 +1,7 @@
+err:
+	Template parse errors:
+	Can't bind to 'ngModel' since it isn't a known property of 'input'.
+aws:
+	找不到ngModel,需在app.module.ts import FormsModule
+
+
