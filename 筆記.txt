@@ -9,3 +9,22 @@
 
 	打开 src/app/app.module.ts 你就会发现 HeroesComponent 已经在顶部导入过了。
 	
+
+選取時添加class
+
+	<li [class.selected]="hero === selectedHero"></li>
+	如果 hreo === selectedHero 就添加class
+	沒有就移除
+	
+@Input()
+	
+	hero: Hero;
+	<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+	將此頁的selectedHero綁定到app-hero-detail裡面的 @Input()hero
+	
+注入 HeroService
+	
+	constructor(private heroService: HeroService) { }	
+	这个参数同时做了两件事：1. 声明了一个私有 heroService 属性，2. 把它标记为一个 HeroService 的注入点。
+	当 Angular 创建 HeroesComponent 时，依赖注入系统就会把这个 heroService 参数设置为 HeroService 的单例对象。
+	
